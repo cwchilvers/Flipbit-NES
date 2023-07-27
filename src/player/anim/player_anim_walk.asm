@@ -1,6 +1,6 @@
-;-----------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; Player Walk Animation Data
-;-----------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; Data sequences for each frame's tiles
 __frame_00_tiles: db $01, $02, $03, $02     ; ID for Frame 0
 __frame_01_tiles: db $04, $05, $06, $05     ; ID for Frame 1
@@ -20,10 +20,10 @@ __maxDelay: db 10   ; Num of frames to wait before next frame
 __frameIndex: db 0  ; Index of the current frame
 __delayIndex: db 0  ; Index of the current frame delay
 
-;-----------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; Player Walk Animation Routine
-;-----------------------------------------------------------------------------------
-update_player_anim_walk:
+;-------------------------------------------------------------------------------
+player_anim_walk:
     ; Increment the frame delay index
     inc __delayIndex
 
@@ -48,10 +48,9 @@ update_player_anim_walk:
     asl a                       
     tay                         ; Store the current frame index in Y
     lda __frames, y             ; Load the current frame's address (low byte)
-    sta animationTilesAddress   ; TODO: Address of the current frame's tiles
+    sta (frame's address)       ; TODO: Store the current frame's address
 
     ; TODO: Update the sprite's tiles on the screen with the tiles from the current frame
-    ; (Code to display tiles at animationTilesAddress goes here)
 
 .NoFrameSwitch:
     rts

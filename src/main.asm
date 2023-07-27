@@ -9,8 +9,8 @@
 ; Import External Modules
 ;-------------------------------------------------------------------------------
     .include "constants.asm"
-    .include "player/player_movement.asm"
-    .include "player/anim/player_anim_walk.asm"
+    .include "player/handlers/player_movement_handler.asm"
+    .include "player/handlers/player_anim_handler.asm"
 
 ;-------------------------------------------------------------------------------
 ; Reset Interrupt Handler
@@ -28,13 +28,11 @@ reset:
 ; Game Loop
 ;-------------------------------------------------------------------------------
 game_loop:
-    ; Game logic goes here
-
     ; Call the player movement routine
-    jsr player_movement
+    jsr player_movement_hdlr
 
     ; Call the player animation routine
-    jsr player_animation
+    jsr player_anim_hdlr
 
     ; Jump back to the game loop
     jmp game_loop
