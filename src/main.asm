@@ -8,7 +8,7 @@
 ;-------------------------------------------------------------------------------
 ; Import External Modules
 ;-------------------------------------------------------------------------------
-    .include "constants.asm"
+    .include "addresses.asm"
     .include "player/handlers/player_movement_handler.asm"
     .include "player/handlers/player_anim_handler.asm"
 
@@ -19,7 +19,17 @@
     .org $8000
 
 reset:
-    ; Initialization code goes here, if needed
+    ; Initialize the stack pointer (SP) to a specific memory address
+    lda #$FF
+    tcs
+
+    ; Disable the NMI (Vertical Blank) interrupt during initialization
+    sei
+
+    ; Additional initialization code goes here
+
+    ; Enable the NMI (Vertical Blank) interrupt again
+    cli
 
     ; Jump to the game loop
     jmp game_loop

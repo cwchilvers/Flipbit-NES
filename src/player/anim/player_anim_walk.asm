@@ -13,12 +13,12 @@ __frames:
     dw __frame_02_tiles     ; Frame 2 tiles
 
 ; Constants
-__maxFrames: db 3   ; Num of frames in the walk cycle
-__maxDelay: db 10   ; Num of frames to wait before next frame
+__maxFrames: .equ player_anim_frame_max
+__maxDelay: .equ player_anim_delay_max
 
 ; Variables
-__frameIndex: db 0  ; Index of the current frame
-__delayIndex: db 0  ; Index of the current frame delay
+__frameIndex .equ player_anim_delay_index
+__delayIndex: .equ player_anim_frame_index
 
 ;-------------------------------------------------------------------------------
 ; Player Walk Animation Routine
