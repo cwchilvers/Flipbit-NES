@@ -14,7 +14,7 @@
 3. [Contact Information](#contact-information)
 
 ## Description
-Flipbit NES is an NES version of the game Flipbit, which is a game originally developed by brother, [Tristan Chilvers](https://github.com/tmchilvers). Flipbit is a simple puzzle game where the player must flip all the bits on the screen to win. This game is currently a work in progress.
+Flipbit NES is an NES version of the game Flipbit, which is a game originally developed by brother, [Tristan Chilvers](https://github.com/tmchilvers). Flipbit is a simple puzzle game where the player must flip between pathways to reach the end of a maze. This game is currently a work in progress.
 
 ## Credits
 - [NESasm](https://github.com/camsaul/nesasm)
