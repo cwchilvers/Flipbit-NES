@@ -1,6 +1,7 @@
-<h1 align="center">
-  Flipbit NES
-</h1>
+<div style="display: flex; align-items: center; justify-content: center; padding-bottom: 30px;">
+  <img src="https://github.com/cwchilvers/Flipbit-NES/assets/59628271/69f55793-d3fa-4254-8d68-d25d8674c8eb" height="60" style="margin-right: 20px;">
+  <h3 style="margin: 0; font-size: 40px">Flipbit NES</h3>
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/6502_Assembly-8A2BE2?style=for-the-badge&color=rgb(107%2C%2090%2C%2088)" alt="6502 Assembly">
