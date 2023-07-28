@@ -1,17 +1,17 @@
 ;-------------------------------------------------------------------------------
 ; Zero Page                 ($0000-$00FF) - 256 bytes
 ;-------------------------------------------------------------------------------
-game_state .res 1
+game_state .rs 1
 
 ; Player
-player_pos_x .res 1
-player_pos_y .res 1
-player_dir .res 1
-player_state .res 1
-player_anim_frame_index .res 1
-player_anim_frame_max .res 1
-player_anim_delay_index .res 1
-player_anim_delay_max .res 1
+player_pos_x .rs 1
+player_pos_y .rs 1
+player_dir .rs 1
+player_state .rs 1
+player_anim_frame_index .rs 1
+player_anim_frame_max .rs 1
+player_anim_delay_index .rs 1
+player_anim_delay_max .rs 1
 
 ;-------------------------------------------------------------------------------
 ; Stack                     ($0100-$01FF) - 256 bytes
@@ -59,7 +59,7 @@ controller_2 = $4017
 ; Interrupt & NMI Vectors   ($FFFA-$FFFF) - 6 bytes
 ;-------------------------------------------------------------------------------
     .org $FFFA
-
+    
     ; NMI (Vertical Blank)
     .dw NMI_handler
 

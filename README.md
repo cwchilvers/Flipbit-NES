@@ -18,7 +18,6 @@ Flipbit NES is an NES version of the game Flipbit, which is a game originally de
 
 ## Credits
 - [NESasm](https://github.com/camsaul/nesasm)
-- [ld65](https://cc65.github.io/doc/ld65.html)
 - [YY-CHR](https://shiru.untergrund.net/software.shtml)
 - [FCEUX](https://fceux.com/web/home.html)
 

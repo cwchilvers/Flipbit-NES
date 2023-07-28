@@ -8,20 +8,20 @@
 ;-------------------------------------------------------------------------------
 ; Import External Modules
 ;-------------------------------------------------------------------------------
-    .include "memory.asm"
-    .include "reset.asm"
-    .include "player/handlers/player_movement_handler.asm"
-    .include "player/handlers/player_anim_handler.asm"
+    .include "../src/memory.asm"
+    .include "../src/interrupts.asm"
+    .include "../src/player/handlers/player_movement_hdlr.asm"
+    .include "../src/player/handlers/player_anim_hdlr.asm"
 
 ;-------------------------------------------------------------------------------
 ; Game Loop
 ;-------------------------------------------------------------------------------
 game_loop:
     ; Call the player movement routine
-    jsr player_movement_hdlr
+    ;jsr player_movement_hdlr
 
     ; Call the player animation routine
-    jsr player_anim_hdlr
+    ;jsr player_anim_hdlr
 
     ; Jump back to the game loop
     jmp game_loop

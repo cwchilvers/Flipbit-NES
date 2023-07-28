@@ -1,0 +1,11 @@
+; ..\src\main.asm
+IRQ_handler                      = $FFFE
+NMI_handler                      = $FFFA
+__frame_01_tiles                 = $C004
+player_anim_hdlr                 = $C036
+player_anim_walk                 = $C012
+__frame_00_tiles                 = $C000
+__frames                         = $C00C
+reset_handler                    = $8000
+game_loop                        = $C044
+__frame_02_tiles                 = $C008

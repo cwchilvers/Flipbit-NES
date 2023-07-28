@@ -1,6 +1,8 @@
 ;-------------------------------------------------------------------------------
 ; Player Walk Animation Data
 ;-------------------------------------------------------------------------------
+    .org $C000
+    
 ; Data sequences for each frame's tiles
 __frame_00_tiles: db $01, $02, $03, $02     ; ID for Frame 0
 __frame_01_tiles: db $04, $05, $06, $05     ; ID for Frame 1
@@ -28,7 +30,8 @@ player_anim_walk:
     inc __delayIndex
 
     ; Check if it's time to switch to the next frame
-    cmp __delayIndex, #__maxDelay
+    lda __delayIndex
+    cmp #__maxDelay
     bcc .NoFrameSwitch
 
     ; Reset the frame delay index
@@ -48,7 +51,7 @@ player_anim_walk:
     asl a                       
     tay                         ; Store the current frame index in Y
     lda __frames, y             ; Load the current frame's address (low byte)
-    sta (frame's address)       ; TODO: Store the current frame's address
+    ; sta (frame's address)     ; TODO: Store the current frame's address
 
     ; TODO: Update the sprite's tiles on the screen with the tiles from the current frame
 
