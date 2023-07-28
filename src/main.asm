@@ -8,31 +8,10 @@
 ;-------------------------------------------------------------------------------
 ; Import External Modules
 ;-------------------------------------------------------------------------------
-    .include "addresses.asm"
+    .include "memory.asm"
+    .include "reset.asm"
     .include "player/handlers/player_movement_handler.asm"
     .include "player/handlers/player_anim_handler.asm"
-
-;-------------------------------------------------------------------------------
-; Reset Interrupt Handler
-;-------------------------------------------------------------------------------
-    .bank 0
-    .org $8000
-
-reset:
-    ; Initialize the stack pointer (SP) to a specific memory address
-    lda #$FF
-    tcs
-
-    ; Disable the NMI (Vertical Blank) interrupt during initialization
-    sei
-
-    ; Additional initialization code goes here
-
-    ; Enable the NMI (Vertical Blank) interrupt again
-    cli
-
-    ; Jump to the game loop
-    jmp game_loop
 
 ;-------------------------------------------------------------------------------
 ; Game Loop
@@ -46,21 +25,6 @@ game_loop:
 
     ; Jump back to the game loop
     jmp game_loop
-
-;-------------------------------------------------------------------------------
-; Interrupt and NMI Vectors
-;-------------------------------------------------------------------------------
-    .bank 0
-    .org $FFFA
-
-    ; NMI (Vertical Blank)
-    .dw nmi_handler
-
-    ; Reset Interrupt
-    .dw reset
-
-    ; IRQ and BRK (not used in most simple NES projects)
-    .dw irq_handler
 
 ;-------------------------------------------------------------------------------
 ; Subroutines (optional)
