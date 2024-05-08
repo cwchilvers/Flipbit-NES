@@ -10,16 +10,19 @@
 
 ## Table of Contents
 1. [Description](#description)
-2. [Credits](#credits)
-3. [Contact Information](#contact-information)
+2. [Technologies Used](#technologies-used)
+3. [Credits](#credits)
+4. [Contact Information](#contact-information)
 
 ## Description
 Flipbit NES is an NES version of the game Flipbit, which is a game originally developed by brother, [Tristan Chilvers](https://github.com/tmchilvers). Flipbit is a simple puzzle game where the player must flip between pathways to reach the end of a maze. This game is currently a work in progress.
 
+## Technologies Used
+* [NESasm](https://github.com/camsaul/nesasm)
+
 ## Credits
-- [NESasm](https://github.com/camsaul/nesasm)
-- [YY-CHR](https://shiru.untergrund.net/software.shtml)
-- [FCEUX](https://fceux.com/web/home.html)
+* [YY-CHR](https://shiru.untergrund.net/software.shtml)
+* [FCEUX](https://fceux.com/web/home.html)
 
 ## Contact Information
 <p align="center">
